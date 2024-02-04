@@ -13,6 +13,7 @@ const Navber = () => {
               <NavLink to='/projects' className={({isActive})=> isActive ? 'text-blue-500' : 'text-black'}>
               Projects 
               </NavLink>
+              
           </nav>
     </header>
   );
