@@ -1,10 +1,19 @@
-
+import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
+import Navber from './components/Navber';
 
 const App = () => {
   return (
-    <div>
-      <h2 className="underline text-red-500">This is App</h2>
-    </div>
+    <main className='bg-slate-300/20'>
+      <Router>
+        <Navber/> 
+        <Routes>
+          <Route path='/' element={'Home' } />
+          <Route path='/about' element={'About' } />
+          <Route path='/projects' element={'Projects' } />
+          <Route path='/contact' element={'Contact' } />
+        </Routes>
+     </Router>
+    </main>
   );
 };
 export default App;
