@@ -1,15 +1,18 @@
-
-import  { useRef, useEffect } from "react";
+/* eslint-disable react/no-unknown-property */
+import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
-import {a} from "@react-spring/three"
+import { a } from "@react-spring/three";
 
-import IslandScene from '../Asset/3D/Island.glb' 
+import islandScene from "../Asset/3D/Island.glb";
 
- const Island = (props) => {
-  const { nodes, materials } = useGLTF("/transformed_1707020540095.glb");
+const Island = (props) => {
+  const islandRef = useRef();
+    const { nodes, materials } = useGLTF(islandScene);
+    
+
   return (
-    <a.group {...props} dispose={null}>
+    <a.group ref={islandRef} {...props}>
       <mesh
         geometry={nodes.pCube11_rocks1_0.geometry}
         material={materials.PaletteMaterial001}
@@ -112,7 +115,6 @@ import IslandScene from '../Asset/3D/Island.glb'
       />
     </a.group>
   );
-}
+};
 
-useGLTF.preload("/transformed_1707020540095.glb");
 export default Island;
