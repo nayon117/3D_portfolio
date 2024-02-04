@@ -2,9 +2,11 @@
 
 const Home = () => {
   return (
-    <div>
-      <h2>This is Home</h2>
-    </div>
+    <section className="w-full h-screen relative">
+          <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+              3d design
+        </div>
+    </section>
   );
 };
 export default Home;
