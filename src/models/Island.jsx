@@ -50,6 +50,20 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
     
   }
 
+  // handle side efffect
+  useEffect(()=>{
+    document.addEventListener("pointerup", handlePointerUp);
+    document.addEventListener("pointermove", handlePointerMove);
+    document.addEventListener("pointerdown", handlePointerDown);
+    
+    return () => {
+      document.removeEventListener("pointerup", handlePointerUp);
+      document.removeEventListener("pointermove", handlePointerMove);
+      document.removeEventListener("pointerdown", handlePointerDown);
+    }
+
+  },[gl, handlePointerDown, handlePointerUp, handlePointerMove])
+
   return (
     <a.group ref={islandRef} {...props}>
       <mesh
