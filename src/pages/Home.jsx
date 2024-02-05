@@ -46,7 +46,7 @@ const Home = () => {
     <section className="w-full h-screen relative">
       {/* popup */}
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-        {currentStage && <HomeInfo />}
+        {currentStage && <HomeInfo  currentStage={currentStage} />}
       </div>
 
       {/* 3d element */}
