@@ -1,5 +1,8 @@
 import  emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Suspense, useRef, useState } from "react";
+import Fox from '../models/Fox'
+import Loader from "../components/Loader";
 
 const Contact = () => {
   const formRef = useRef(null)
@@ -40,6 +43,8 @@ const Contact = () => {
 
   return (
     <section className="relative flex flex-col md:flex-row max-container">
+
+      {/* form */}
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get In Touch</h1>
 
@@ -97,6 +102,32 @@ const Contact = () => {
           </button>
         </form>
       </div>
+
+      {/* 3d model */}
+       <div className="w-full lg:w-1/2 lg:h-auto md:h-[550px]h-[350px]">
+            <Canvas 
+            camera={{
+              position:[0, 0, 5],
+              fov:75,
+              near:0.1,
+              far:1000   
+            }}
+            >
+
+             <directionalLight intensity={2.5} position={[0, 0, 1]} />
+             <ambientLight intensity={0.5} />
+
+              <Suspense fallback={<Loader/>}>
+                  <Fox   
+                  position={[0.5, 0.35, 0]}
+                  rotation={[12.6, -0.6, 0]}
+                  scale={[0.5, 0.5, 0.5]}
+                  />
+              </Suspense>
+
+            </Canvas>
+       </div>
+
     </section>
   );
 };
