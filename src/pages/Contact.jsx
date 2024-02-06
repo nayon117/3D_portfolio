@@ -65,7 +65,7 @@ const Contact = () => {
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get In Touch</h1>
 
-        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-14">
+        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-8">
           <label htmlFor="" className="font-semibold text-black-500">
             Name
             <input
