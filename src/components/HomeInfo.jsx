@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FaDownload } from "react-icons/fa";
+import resume from "../../public/Hasibul Hasan Resume.pdf";
 
 import { arrow } from "../Asset/icons";
 
@@ -10,7 +12,7 @@ const HomeInfo = ({ currentStage }) => {
         <span className='font-semibold mx-2 text-white'>Hasibul Hasan</span>
         👋
         <br />
-        A Web Developer from BD
+        A Wizard of Web Development
       </h1>
     );
 
@@ -21,10 +23,14 @@ const HomeInfo = ({ currentStage }) => {
           Worked with discipline <br /> and picked up many skills along the way
         </p>
 
-        <Link to='/about' className='neo-brutalism-white neo-btn'>
+        <a href={resume} download>
+          <button className="btn border-first flex mx-auto items-center hover:bg-second hover:text-white text-second mt-6 uppercase"><FaDownload className="mr-2" /> Resume</button>
+        </a>
+
+        {/* <Link to='/about' className='neo-brutalism-white neo-btn'>
           Learn more
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
-        </Link>
+        </Link> */}
       </div>
     );
   }

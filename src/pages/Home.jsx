@@ -107,6 +107,7 @@ const Home = () => {
         onClick={()=>setIsPlayingMusic(!isPlayingMusic)}  
         />
       </div>
+      
     </section>
   );
 };
