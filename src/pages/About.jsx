@@ -20,8 +20,21 @@ const About = () => {
 
       <div className="mt-5 flex flex-col text-slate-500">
         <p>
-          Web Developer based in Bangladesh specilizing in technical education
-          through hands on learning and applications
+          👋 Hey there! I'm a passionate MERN Stack developer specializing in
+          crafting immersive digital experiences. With expertise in React,
+          Tailwind CSS, and Firebase, I bring dynamic and responsive
+          applications to life.{" "}
+        </p>
+
+        <p className="my-5">
+          🔥 Proficient in Node.js, Express.js, and MongoDB, I excel in backend
+          development, ensuring efficient server-side operations and robust
+          database management.
+        </p>
+
+        <p>
+          🏆 Certified Meta Frontend Developer and Programming Hero graduate,
+          I'm dedicated to pushing boundaries and staying ahead in technology.
         </p>
       </div>
 
@@ -45,13 +58,12 @@ const About = () => {
         </div>
       </div>
 
-     {/* experience part */}
+      {/* experience part */}
       <div className="py-16">
         <h3 className="head-text">Education</h3>
         <div className="mt-5 flex flex-col text-slate-500">
           <p>
-            Web Developer based in Bangladesh specilizing in technical education
-            through hands on learning and applications
+          Here's a glimpse of my educational journey so far:
           </p>
         </div>
 
@@ -91,11 +103,11 @@ const About = () => {
                   </p>
                 </div>
 
-                <ul className='my-5 list-disc ml-5 space-y-2'>
+                <ul className="my-5 list-disc ml-5 space-y-2">
                   {experience.points.map((point, index) => (
                     <li
                       key={`experience-point-${index}`}
-                      className='text-black-500/50 font-normal pl-1 text-sm'
+                      className="text-black font-normal pl-1 text-sm"
                     >
                       {point}
                     </li>
@@ -108,10 +120,9 @@ const About = () => {
       </div>
 
       {/* cta part */}
-       <hr className="border-slate-200" />
-       <CTA/>
-       <AdditionalContact/>
-
+      <hr className="border-slate-200" />
+      <CTA />
+      <AdditionalContact />
     </section>
   );
 };

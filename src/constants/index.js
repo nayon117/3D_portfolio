@@ -14,12 +14,10 @@ import {
   javascript,
   linkedin,
   mongodb,
-  motion,
   
   nodejs,
   pricewise,
   react,
-  redux,
    
   snapgram,
   summiz,
@@ -65,12 +63,6 @@ export const skills = [
     type: "Database",
   },
   {
-    imageUrl: motion,
-    name: "Motion",
-    type: "Animation",
-  },
-
-  {
     imageUrl: nodejs,
     name: "Node.js",
     type: "Backend",
@@ -80,12 +72,7 @@ export const skills = [
     name: "React",
     type: "Frontend",
   },
-  {
-    imageUrl: redux,
-    name: "Redux",
-    type: "State Management",
-  },
-
+  
   {
     imageUrl: tailwindcss,
     name: "Tailwind CSS",
@@ -102,7 +89,6 @@ export const experiences = [
     date: "March 2016 - April 2018",
     points: [
       "Achieved exceptional results in academic coursework and examinations.",
-      "Participated in extracurricular activities, fostering teamwork and leadership skills.",
       "Demonstrated proficiency in various subjects, including mathematics, science, and languages.",
       "Engaged in community service projects, contributing positively to society.",
     ],
@@ -128,7 +114,6 @@ export const experiences = [
     date: "Jan 2021 - current",
     points: [
         "Studying advanced statistical methods and theories to analyze and interpret data effectively.",
-        "Engaging in research projects and data analysis tasks to gain practical experience.",
         "Collaborating with peers and faculty members on academic projects and assignments.",
         "Applying statistical techniques to real-world scenarios and problem-solving exercises.",
     ],
@@ -150,7 +135,7 @@ export const socialLinks = [
   {
     name: "LinkedIn",
     iconUrl: linkedin,
-    link: "https://www.linkedin.com/in/hasibul-hasan-nayon-3b35362a3/",
+    link: "https://www.linkedin.com/in/hasibulhasannayon/",
   },
 ];
 
@@ -158,10 +143,10 @@ export const projects = [
   {
     iconUrl: pricewise,
     theme: "btn-back-red",
-    name: "Donation Campaign Platform",
+    name: "InnovatED",
     description:
-      " Developed a donation campaign platform using React and TailwindCSS. The platform facilitates quick and secure donations to various charitable causes, allowing users to discover and support initiatives effortlessly.",
-     link: "https://guileless-centaur-9a89fe.netlify.app/",
+      "InnovateED is an advanced e-learning platform designed to offer a seamless learning experience. With a blend of user-centric features and a rich interface, it caters to both students and teachers, providing a conducive environment for learning and teaching.",
+     link: "https://innavated.web.app/",
   },
   {
     iconUrl: threads,
@@ -177,7 +162,7 @@ export const projects = [
     name: "Automotive Gearup",
     description:
       "Welcome to our automotive website, where you can explore a wide range of car brands, view car details, update car listings, and shop for your dream car.",
-    link: " https://automotive-gearup.web.app/",
+    link: "https://automotive-gearup.web.app/",
   },
   {
     iconUrl: snapgram,
@@ -201,6 +186,6 @@ export const projects = [
     name: "Skillify",
     description:
       "Skillify is an advanced e-learning platform designed to offer a seamless learning experience. With a blend of user-centric features and a rich interface, it caters to both students and teachers, providing a conducive environment for learning and teaching.",
-    link: " https://skillify-client.web.app/",
+    link: "https://skillify-client.web.app/",
   },
 ];

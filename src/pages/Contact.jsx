@@ -7,7 +7,7 @@ import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
 
 const Contact = () => {
-  const formRef = useRef(null)
+
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState('idle')
@@ -26,13 +26,13 @@ const Contact = () => {
     emailjs.send(
       import.meta.env.VITE_APP_EMAILJS_SEVICE_ID,
       import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-     {
-      from_name:form.name,
-      to_name:"Hasibul Hasan",
-      from_email:form.email,
-      to_email:"hasibul.nayon1@gmail.com",
-      message:form.message
-     },
+      {
+        user_name:form.name,
+        to_name:"Hasibul Hasan",
+        user_email:form.email,
+        to_email:"hasibul.nayon1@gmail.com",
+        message:form.message
+       },
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(()=>{
       setIsLoading(false);
@@ -65,7 +65,7 @@ const Contact = () => {
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get In Touch</h1>
 
-        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-8">
+        <form  onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-8">
           <label htmlFor="" className="font-semibold text-black-500">
             Name
             <input
